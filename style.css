@@ -71,7 +71,7 @@ body {
 
 
 /* =====================================
-   HERO
+   HERO SECTION
 ===================================== */
 
 .hero {
@@ -79,6 +79,7 @@ body {
     padding: 120px 8%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
 
     position: relative;
@@ -93,8 +94,10 @@ body {
 
 .hero-content {
     max-width: 900px;
+    width: 100%;
     position: relative;
     z-index: 5;
+    text-align: center;
 }
 
 .hero-tag {
@@ -148,10 +151,196 @@ body {
     color: #aaa;
     font-size: 19px;
 
-    margin-bottom: 35px;
+    margin: 0 auto 35px;
 
     animation: fadeUp 1.4s ease;
 }
+
+
+/* =====================================
+   HERO PHOTO
+===================================== */
+
+.hero-visual {
+    width: 400px;
+    max-width: 90%;
+
+    margin: 30px auto 35px;
+
+    position: relative;
+    z-index: 5;
+}
+
+.hero-photo {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    border: 1px solid rgba(183,255,74,0.3);
+
+    box-shadow:
+        0 0 30px rgba(183,255,74,0.12),
+        0 20px 60px rgba(0,0,0,0.4);
+}
+
+.hero-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* NAME ON PHOTO */
+
+.photo-name {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 80px 25px 25px;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.95),
+        rgba(0,0,0,0.65),
+        transparent
+    );
+
+    text-align: left;
+}
+
+.photo-name h2 {
+    margin: 0;
+
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+
+    background: linear-gradient(
+        90deg,
+        #b7ff4a,
+        #00e5ff,
+        #c45cff,
+        #ff5ca8,
+        #b7ff4a
+    );
+
+    background-size: 300% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        nameGradient 5s linear infinite,
+        nameFloat 3s ease-in-out infinite;
+}
+
+.photo-name p {
+    margin: 7px 0 0;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    animation: specializationFade 1.5s ease;
+}
+
+
+/* =====================================
+   NAME ANIMATIONS
+===================================== */
+
+@keyframes nameGradient {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 300% center;
+    }
+}
+
+@keyframes nameFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes specializationFade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 26px;
+
+    margin-right: 12px;
+
+    border-radius: 40px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: #b7ff4a;
+    color: #080808;
+
+    box-shadow:
+        0 0 20px rgba(183,255,74,0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 0 35px rgba(183,255,74,0.5);
+}
+
+.btn-secondary {
+    color: white;
+
+    border: 1px solid #444;
+}
+
+.btn-secondary:hover {
+    border-color: #00e5ff;
+    color: #00e5ff;
+
+    transform: translateY(-3px);
+}
+
+
 
 
 /* =====================================
