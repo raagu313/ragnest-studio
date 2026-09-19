@@ -1667,3 +1667,26 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+/* =====================================
+   GALAXY BACKGROUND - ALL SECTIONS
+===================================== */
+
+html,
+body {
+    background:
+        linear-gradient(
+            rgba(0, 0, 10, 0.20),
+            rgba(0, 0, 10, 0.20)
+        ),
+        url("space-background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Let the galaxy show through every section */
+section {
+    background: transparent !important;
+}
