@@ -1708,7 +1708,8 @@ body {
     font-size: 2rem;
     font-weight: 700;
     color: white;
-    white-space: nowrap;
+    text-align: left;
+    width: 100%;
     animation: slideFromRight 1.5s ease-out forwards;
 }
 
@@ -1723,3 +1724,4 @@ body {
         opacity: 1;
     }
 }
+
