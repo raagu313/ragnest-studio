@@ -1653,25 +1653,34 @@ footer span {
 
 }
 /* =====================================
-   GALAXY BACKGROUND - ALL SECTIONS
+   GALAXY WEBSITE BACKGROUND
 ===================================== */
 
-html,
 body {
-    background:
-        linear-gradient(
-            rgba(0, 0, 10, 0.20),
-            rgba(0, 0, 10, 0.20)
-        ),
-        url("space-background.png");
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background: #02040b;
+    position: relative;
 }
 
-/* Let the galaxy show through every section */
-section {
-    background: transparent !important;
+/* Galaxy layer */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("space-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -10;
+    pointer-events: none;
+}
+
+/* Keep website sections above the galaxy */
+main,
+section,
+header,
+footer {
+    position: relative;
+    z-index: 1;
 }
