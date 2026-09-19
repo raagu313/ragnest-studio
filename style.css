@@ -1704,3 +1704,22 @@ body {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
 }
+.intro-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    animation: slideFromRight 1.5s ease-out forwards;
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
