@@ -1684,4 +1684,17 @@ footer {
     position: relative;
     z-index: 1;
 }
+/* =====================================
+   SHOW GALAXY THROUGH ALL SECTIONS
+===================================== */
+
+.hero,
+.services,
+.about,
+.process,
+.pricing,
+.contact,
+.cta {
+    background: transparent !important;
+}
 
