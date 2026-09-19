@@ -1697,4 +1697,10 @@ footer {
 .cta {
     background: transparent !important;
 }
-
+body {
+    background-image: url("space-background.png.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
