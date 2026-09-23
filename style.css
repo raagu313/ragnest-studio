@@ -1728,4 +1728,8 @@ body {
         opacity: 1;
     }
 }
+.contact-item {
+    color: white !important;
+    text-decoration: none !important;
+}
 
