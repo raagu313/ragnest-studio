@@ -2161,5 +2161,34 @@ body {
         transparent
     ) !important;
 }
+/* =========================================
+   MOBILE CARD LAYOUT
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Process */
+    .process-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Make cards comfortable on phone */
+    .service-card,
+    .price-card,
+    .process-card {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
 
 
